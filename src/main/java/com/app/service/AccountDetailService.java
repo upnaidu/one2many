@@ -16,19 +16,19 @@ public class AccountDetailService {
 	@Autowired
 	private AccountDetailsRepo accountDetailsRepo;
 
-	public int saveAccountDetails(String name) {
+	public int saveAccountDetails(String custName) {
 
 		List<TransactionHistory> transList = new ArrayList<TransactionHistory>();
 
 		AccoutDetails accoutDetails = new AccoutDetails();
-		//accoutDetails.setAcntId(2);
+		// accoutDetails.setAcntId(2);
 		accoutDetails.setAcntName("SBI");
 
 		accoutDetails.setTransactionHistory(transList);
 
 		TransactionHistory transactionHistory = new TransactionHistory();
-		//transactionHistory.setTransId(101);
-		transactionHistory.setTransName(name);
+		// transactionHistory.setTransId(101);
+		transactionHistory.setTransName(custName);
 		transactionHistory.setAccoutDetails(accoutDetails);
 
 		transList.add(transactionHistory);
